@@ -1,120 +1,39 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top AI E-Books & Guides 2026</title>
+    <title>Ebooks Digitales | Descarga Instantánea</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
-        header { text-align: center; padding: 30px 0 10px 0; }
-        h1 { font-size: 2.3rem; margin-bottom: 10px; color: #111; }
-        p.subtitle { color: #666; font-size: 1.1rem; }
-        .lang-switch { text-align: right; margin-bottom: 15px; font-size: 0.9rem; }
-        .lang-switch a { color: #0066cc; text-decoration: none; font-weight: bold; margin-left: 10px; cursor: pointer; }
-        .card { background: #fff; border-radius: 8px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .card h2 { margin-top: 0; color: #0066cc; }
-        .price { font-weight: bold; color: #2e7d32; font-size: 1.1rem; margin: 10px 0; }
-        .purchase-options { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 15px; gap: 15px; }
-        .btn { display: inline-block; background: #0066cc; color: #fff; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold; text-align: center; }
-        .btn:hover { background: #004999; }
-        .qr-container { text-align: center; background: #fff; padding: 10px; border: 1px solid #ddd; border-radius: 6px; }
-        .qr-container img { width: 90px; height: 90px; display: block; margin: 0 auto; }
-        .qr-container span { font-size: 0.75rem; color: #666; margin-top: 4px; display: block; }
-        .qvapay-box { background: #e8f4fd; border-left: 4px solid #0066cc; padding: 15px; margin-top: 30px; border-radius: 4px; font-size: 0.95rem; }
-        .lang-es { display: none; }
-        footer { text-align: center; padding: 30px 0; color: #888; font-size: 0.9rem; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; display: flex; justify-content: center; }
+        .container { max-width: 600px; width: 100%; background: #1e293b; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        h1 { font-size: 24px; color: #38bdf8; margin-bottom: 8px; }
+        .product { background: #334155; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .price { font-size: 20px; color: #4ade80; font-weight: bold; margin: 10px 0; }
+        .btn { display: inline-block; background: #2563eb; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; }
+        .btn:hover { background: #1d4ed8; }
+        p { color: #94a3b8; font-size: 14px; line-height: 1.5; }
     </style>
-    <script>
-        function switchLang(lang) {
-            const enElements = document.querySelectorAll('.lang-en');
-            const esElements = document.querySelectorAll('.lang-es');
-            if (lang === 'es') {
-                enElements.forEach(el => el.style.display = 'none');
-                esElements.forEach(el => el.style.display = 'block');
-            } else {
-                enElements.forEach(el => el.style.display = 'block');
-                esElements.forEach(el => el.style.display = 'none');
-            }
-        }
-    </script>
 </head>
 <body>
-    <div class="lang-switch">
-        <a onclick="switchLang('en')">English</a> | <a onclick="switchLang('es')">Español</a>
-    </div>
+    <div class="container">
+        <h1>📚 Catálogo de Infoproductos Digitales</h1>
+        <p>Adquiere guías profesionales en formato PDF con entrega inmediata tras confirmar tu pago por QvaPay.</p>
 
-    <header>
-        <h1 class="lang-en">Top AI Guides & E-Books</h1>
-        <h1 class="lang-es" style="display:none;">Guías y Libros de Inteligencia Artificial</h1>
-        <p class="subtitle lang-en">Curated digital resources to master artificial intelligence, prompt engineering, and digital productivity.</p>
-        <p class="subtitle lang-es" style="display:none;">Recursos digitales seleccionados para dominar la inteligencia artificial y la productividad digital.</p>
-    </header>
-
-    <main>
-        <!-- Libro 1 -->
-        <section class="card">
-            <h2 class="lang-en">The Ultimate ChatGPT Prompt Engineering Guide</h2>
-            <h2 class="lang-es" style="display:none;">La Guía Definitiva de Prompt Engineering para ChatGPT</h2>
-            <p class="lang-en">Master the art of prompt engineering with advanced techniques, templates, and frameworks designed to get the absolute best results out of AI models.</p>
-            <p class="lang-es" style="display:none;">Domina el arte de la ingeniería de prompts con técnicas avanzadas y plantillas diseñadas para obtener los mejores resultados de la IA.</p>
-            <div class="price">Price / Precio: $29 USD</div>
-            <div class="purchase-options">
-                <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn lang-en" target="_blank" rel="nofollow">Buy via Qvapay</a>
-                <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn lang-es" style="display:none;" target="_blank" rel="nofollow">Comprar por Qvapay</a>
-                <div class="qr-container">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qvapay.com/pay/pacpumremedioszjdp436" alt="QR Qvapay">
-                    <span class="lang-en">Scan to Pay</span>
-                    <span class="lang-es" style="display:none;">Escanear</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Libro 2 -->
-        <section class="card">
-            <h2 class="lang-en">AI Side Hustles & Monetization Blueprint</h2>
-            <h2 class="lang-es" style="display:none;">Plan de Monetización y Negocios con IA</h2>
-            <p class="lang-en">A step-by-step handbook on how to leverage AI tools to launch online micro-services, freelance faster, and build automated digital income streams.</p>
-            <p class="lang-es" style="display:none;">Manual paso a paso sobre cómo usar herramientas de IA para lanzar microservicios y crear fuentes de ingresos digitales automatizadas.</p>
-            <div class="price">Price / Precio: $35 USD</div>
-            <div class="purchase-options">
-                <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn lang-en" target="_blank" rel="nofollow">Buy via Qvapay</a>
-                <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn lang-es" style="display:none;" target="_blank" rel="nofollow">Comprar por Qvapay</a>
-                <div class="qr-container">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qvapay.com/pay/pacpumremedioszjdp436" alt="QR Qvapay">
-                    <span class="lang-en">Scan to Pay</span>
-                    <span class="lang-es" style="display:none;">Escanear</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Libro 3 -->
-        <section class="card">
-            <h2 class="lang-en">No-Code AI Automation Handbook</h2>
-            <h2 class="lang-es" style="display:none;">Manual de Automatización con IA sin Código</h2>
-            <p class="lang-en">Learn how to connect AI APIs and no-code platforms to automate repetitive business tasks, save hours of work, and scale solo operations.</p>
-            <p class="lang-es" style="display:none;">Aprende a conectar APIs de IA y plataformas sin código para automatizar tareas repetitivas y escalar operaciones individuales.</p>
-            <div class="price">Price / Precio: $39 USD</div>
-            <div class="purchase-options">
-                <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn lang-en" target="_blank" rel="nofollow">Buy via Qvapay</a>
-                <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn lang-es" style="display:none;" target="_blank" rel="nofollow">Comprar por Qvapay</a>
-                <div class="qr-container">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qvapay.com/pay/pacpumremedioszjdp436" alt="QR Qvapay">
-                    <span class="lang-en">Scan to Pay</span>
-                    <span class="lang-es" style="display:none;">Escanear</span>
-                </div>
-            </div>
-        </section>
-
-        <div class="qvapay-box">
-            <span class="lang-en"><strong>Secure Payments:</strong> Processed securely via Qvapay handle <code>pacpumremedioszjdp436</code>. Instant digital delivery upon confirmation.</span>
-            <span class="lang-es" style="display:none;"><strong>Pagos Seguros:</strong> Procesados de forma segura a través de Qvapay con el usuario <code>pacpumremedioszjdp436</code>. Entrega digital instantánea al confirmar.</span>
+        <div class="product">
+            <h2>The Ultimate AI Prompt Guide 2026</h2>
+            <p><strong>English / Español:</strong> Master ChatGPT, Midjourney, and automate your daily workflows with over 500+ tested prompts.</p>
+            <div class="price">$6.00 USD</div>
+            <!-- Enlace directo vinculado a tu cuenta de QvaPay -->
+            <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn" target="_blank">💳 Pagar con QvaPay ($6)</a>
         </div>
-    </main>
 
-    <footer>
-        <p class="lang-en">&copy; 2026 AI Guides. Independent digital resource recommendations.</p>
-        <p class="lang-es" style="display:none;">&copy; 2026 Guías de IA. Recomendaciones de recursos digitales independientes.</p>
-    </footer>
+        <div class="product">
+            <h2>Recetario Express Saludable / Quick Healthy Recipes</h2>
+            <p>Recetas rápidas de 15 minutos en doble idioma (Español e Inglés) para una alimentación práctica.</p>
+            <div class="price">$5.00 USD</div>
+            <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn" target="_blank">💳 Pagar con QvaPay ($5)</a>
+        </div>
+    </div>
 </body>
 </html>
