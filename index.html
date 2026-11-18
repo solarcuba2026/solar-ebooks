@@ -3,62 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infoproductos Digitales | Descarga Inmediata PDF</title>
+    <title>Biblioteca Digital | Ebooks de Energía Solar, IA, Recetas, Fitness y Más</title>
+    <meta name="description" content="Descarga guías y ebooks prácticos en PDF sobre sistemas fotovoltaicos y energía solar en Cuba, inteligencia artificial, recetas de cocina, fitness y belleza. Pago seguro y anónimo por QvaPay.">
+    <meta name="keywords" content="ebooks energia solar cuba, paneles solares pdf, qvapay pago anonimo, guias inteligencia artificial, recetas de cocina pdf">
+    <link rel="canonical" href="https://solarcuba2026.github.io/solar-ebooks/">
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; display: flex; justify-content: center; }
-        .container { max-width: 650px; width: 100%; background: #1e293b; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
-        h1 { font-size: 26px; color: #38bdf8; margin-bottom: 8px; text-align: center; }
-        .subtitle { text-align: center; color: #94a3b8; font-size: 14px; margin-bottom: 25px; }
-        .product { background: #334155; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #38bdf8; }
-        .product h2 { margin-top: 0; font-size: 18px; color: #f1f5f9; }
-        .price { font-size: 20px; color: #4ade80; font-weight: bold; margin: 10px 0; }
-        .btn { display: block; text-align: center; background: #2563eb; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 12px; transition: background 0.2s; }
-        .btn:hover { background: #1d4ed8; }
-        p { color: #cbd5e1; font-size: 14px; line-height: 1.5; }
-        .footer { text-align: center; margin-top: 30px; font-size: 12px; color: #64748b; border-top: 1px solid #334155; padding-top: 15px; }
+        :root {
+            --primary: #0f172a;
+            --accent: #f59e0b;
+            --accent-hover: #d97706;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --border: #e2e8f0;
+            --qvapay: #06b6d4;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        /* Cabecera */
+        header { background: var(--primary); color: #fff; text-align: center; padding: 2.5rem 1rem; }
+        header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        header p { color: #cbd5e1; max-width: 650px; margin: 0 auto; font-size: 1rem; }
+
+        /* Filtros de categoría */
+        .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; padding: 1.5rem 1rem 0.5rem; max-width: 1100px; margin: 0 auto; }
+        .filter-btn { background: #fff; border: 1px solid var(--border); padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-size: 0.9rem; font-weight: 600; color: var(--primary); transition: all 0.2s; }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+        /* Contenedor Principal */
+        .container { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+
+        /* Tarjetas de Ebooks */
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.03); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 16px rgba(0,0,0,0.06); }
+        .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 6px; margin-bottom: 0.75rem; width: fit-content; }
+        .badge-solar { background: #fef3c7; color: #b45309; }
+        .badge-ia { background: #e0e7ff; color: #3730a3; }
+        .badge-biblia { background: #f3e8ff; color: #6b21a8; }
+        .badge-cocina { background: #ffedd5; color: #9a3412; }
+        .badge-fitness { background: #dcfce7; color: #166534; }
+
+        .card h3 { font-size: 1.15rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .card p { font-size: 0.92rem; color: #475569; margin-bottom: 1.25rem; flex-grow: 1; }
+        
+        .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1rem; }
+        .price { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
+        .btn { background: var(--qvapay); color: #fff; text-decoration: none; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 8px; font-size: 0.9rem; transition: background 0.2s; display: inline-flex; align-items: center; gap: 0.4rem; }
+        .btn:hover { background: #0891b2; }
+
+        /* Sección de Pago Qvapay explicativa */
+        .qvapay-info-box { background: #ecfeff; border: 1px solid #cffafe; border-radius: 12px; padding: 2rem; margin-top: 3rem; text-align: center; }
+        .qvapay-info-box h3 { color: #0e7490; margin-bottom: 0.5rem; }
+        .qvapay-info-box p { color: #155e75; max-width: 600px; margin: 0 auto 1.5rem; font-size: 0.95rem; }
+        .qvapay-user-tag { background: #fff; display: inline-block; padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; color: #0891b2; border: 1px solid #a5f3fc; margin-bottom: 1rem; }
+
+        /* Sección SEO y Preguntas Frecuentes */
+        .seo-section { background: #fff; border-top: 1px solid var(--border); margin-top: 3rem; padding: 3rem 1rem; }
+        .seo-content { max-width: 850px; margin: 0 auto; }
+        .seo-content h2 { color: var(--primary); font-size: 1.5rem; margin: 1.5rem 0 0.75rem; }
+        .seo-content h3 { color: var(--primary); font-size: 1.1rem; margin: 1.25rem 0 0.4rem; }
+        .seo-content p, .seo-content li { margin-bottom: 0.8rem; color: #334155; }
+        .seo-content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+
+        footer { text-align: center; padding: 2rem 1rem; background: var(--primary); color: #94a3b8; font-size: 0.85rem; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>📚 Catálogo de Infoproductos Digitales</h1>
-        <div class="subtitle">Guías profesionales en formato PDF • Descarga inmediata por QvaPay</div>
 
-        <!-- Producto 1: IA -->
-        <div class="product">
-            <h2>The Ultimate AI Prompt Guide 2026</h2>
-            <p><strong>English / Español:</strong> Domina ChatGPT, Claude y Midjourney con más de 500 prompts probados para marketing, automatización y creación de contenidos.</p>
-            <div class="price">$6.00 USD</div>
-            <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn" target="_blank">💳 Pagar $6 USD con QvaPay</a>
-        </div>
+<header>
+    <h1>Biblioteca Digital: Guías Prácticas y Ebooks en PDF</h1>
+    <p>Conocimiento directo sobre Energía Solar Fotovoltaica, Inteligencia Artificial, Cocina y Bienestar. Pago 100% anónimo y seguro.</p>
+</header>
 
-        <!-- Producto 2: Recetario -->
-        <div class="product">
-            <h2>Quick Healthy Recipes / Recetario Express Saludable</h2>
-            <p>Recetas rápidas de 15 minutos en doble idioma (Español e Inglés) para una alimentación práctica, saludable y sin complicaciones diarias.</p>
-            <div class="price">$5.00 USD</div>
-            <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn" target="_blank">💳 Pagar $5 USD con QvaPay</a>
-        </div>
+<!-- Botones de Filtro -->
+<div class="filters">
+    <button class="filter-btn active" onclick="filtrar('todos', this)">Todos</button>
+    <button class="filter-btn" onclick="filtrar('solar', this)">☀️ Energía Solar</button>
+    <button class="filter-btn" onclick="filtrar('ia', this)">🤖 Inteligencia Artificial</button>
+    <button class="filter-btn" onclick="filtrar('biblia', this)">📜 Misterios de la Biblia</button>
+    <button class="filter-btn" onclick="filtrar('cocina', this)">🍳 Recetas de Cocina</button>
+    <button class="filter-btn" onclick="filtrar('fitness', this)">💪 Fitness y Belleza</button>
+</div>
 
-        <!-- Producto 3: Misterios de la Biblia -->
-        <div class="product">
-            <h2>Misterios de la Biblia y Enigmas Históricos</h2>
-            <p>Un recorrido fascinante por los relatos, profecías y pasajes ocultos de las Escrituras analizados desde una perspectiva cultural e histórica.</p>
-            <div class="price">$6.00 USD</div>
-            <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn" target="_blank">💳 Pagar $6 USD con QvaPay</a>
-        </div>
+<!-- Catálogo de Ebooks -->
+<main class="container">
+    <div class="grid" id="catalogo">
 
-        <!-- Producto 4: Fitness y Belleza -->
-        <div class="product">
-            <h2>Fitness, Cuidado Personal y Belleza Natural</h2>
-            <p>Rutinas efectivas de entrenamiento en casa, hábitos de bienestar y secretos de cuidado personal para una vida activa y equilibrada.</p>
-            <div class="price">$5.00 USD</div>
-            <a href="https://qvapay.com/pay/pacpumremedioszjdp436" class="btn" target="_blank">💳 Pagar $5 USD con QvaPay</a>
-        </div>
+        <!-- CATEGORÍA: ENERGÍA SOLAR -->
+        <article class="card" data-cat="solar">
+            <div>
+                <span class="badge badge-solar">Energía Solar</span>
+                <h3>Manual Práctico de Paneles Solares e Inversores en Cuba</h3>
+                <p>Guía paso a paso para calcular consumo, elegir placas solares, configurar inversores híbridos (110V/220V) y evitar fallos en instalaciones residenciales.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$5.00 USD</span>
+                <!-- Enlace de pago directo a QvaPay con tu usuario -->
+                <a href="https://qvapay.com/payto/pacpumremedioszjdp436" target="_blank" class="btn">💳 Pagar con QvaPay</a>
+            </div>
+        </article>
 
-        <div class="footer">
-            🔒 Pagos procesados de forma segura a través de QvaPay (Usuario: pacpumremedioszjdp436). Tras abonar, recibirás tu archivo de forma directa.
-        </div>
+        <article class="card" data-cat="solar">
+            <div>
+                <span class="badge badge-solar">Energía Solar</span>
+                <h3>Guía de Baterías de Litio (LiFePO4) y Estaciones Portátiles</h3>
+                <p>Todo sobre mantenimiento, ciclos de carga, cableado seguro y optimización de bancos de baterías y estaciones EcoFlow / Bluetti ante cortes eléctricos.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$5.00 USD</span>
+                <a href="https://qvapay.com/payto/pacpumremedioszjdp436" target="_blank" class="btn">💳 Pagar con QvaPay</a>
+            </div>
+        </article>
+
+        <!-- CATEGORÍA: INTELIGENCIA ARTIFICIAL -->
+        <article class="card" data-cat="ia">
+            <div>
+                <span class="badge badge-ia">Inteligencia Artificial</span>
+                <h3>Guía Maestra de Inteligencia Artificial y Prompts Efectivos</h3>
+                <p>Aprende a dominar herramientas de IA para automatizar tareas, redactar textos, generar imágenes y aumentar tu productividad diaria desde cero.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$4.00 USD</span>
+                <a href="https://qvapay.com/payto/pacpumremedioszjdp436" target="_blank" class="btn">💳 Pagar con QvaPay</a>
+            </div>
+        </article>
+
+        <!-- CATEGORÍA: MISTERIOS DE LA BIBLIA -->
+        <article class="card" data-cat="biblia">
+            <div>
+                <span class="badge badge-biblia">Misterios de la Biblia</span>
+                <h3>Enigmas, Relatos Ocultos y Misterios de la Biblia</h3>
+                <p>Un recorrido fascinante por los pasajes más profundos, simbolismos históricos, profecías y hallazgos arqueológicos vinculados a las escrituras.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$4.00 USD</span>
+                <a href="https://qvapay.com/payto/pacpumremedioszjdp436" target="_blank" class="btn">💳 Pagar con QvaPay</a>
+            </div>
+        </article>
+
+        <!-- CATEGORÍA: RECETAS DE COCINA -->
+        <article class="card" data-cat="cocina">
+            <div>
+                <span class="badge badge-cocina">Recetas de Cocina</span>
+                <h3>Recetario Práctico: Platos Caseros, Sabrosos y Económicos</h3>
+                <p>Colección de recetas paso a paso con ingredientes accesibles para preparar comidas deliciosas, postres y platos tradicionales en poco tiempo.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$3.00 USD</span>
+                <a href="https://qvapay.com/payto/pacpumremedioszjdp436" target="_blank" class="btn">💳 Pagar con QvaPay</a>
+            </div>
+        </article>
+
+        <!-- CATEGORÍA: FITNESS Y BELLEZA -->
+        <article class="card" data-cat="fitness">
+            <div>
+                <span class="badge badge-fitness">Fitness y Belleza</span>
+                <h3>Guía Integral de Cuidado Personal, Fitness y Belleza Natural</h3>
+                <p>Rutinas de ejercicio en casa, consejos de nutrición, cuidado de la piel y hábitos saludables para mejorar tu bienestar físico y apariencia.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$4.00 USD</span>
+                <a href="https://qvapay.com/payto/pacpumremedioszjdp436" target="_blank" class="btn">💳 Pagar con QvaPay</a>
+            </div>
+        </article>
+
     </div>
+</main>
+
+<!-- Bloque Informativo de QvaPay y Privacidad -->
+<div class="container">
+    <div class="qvapay-info-box">
+        <h3>🔒 Compra Segura y 100% Anónima con QvaPay</h3>
+        <p>No recopilamos datos personales ni exigimos registros molestos. Realiza tu pago de forma totalmente privada utilizando la pasarela de QvaPay mediante nuestro usuario oficial:</p>
+        <div class="qvapay-user-tag">Usuario: pacpumremedioszjdp436</div>
+        <p style="font-size: 0.85rem; color: #475569; margin-bottom: 0;">Tras efectuar el pago, puedes notificar o recibir tu PDF de manera directa y confidencial.</p>
+    </div>
+</div>
+
+<!-- Sección de Texto Optimizado para SEO (Google) -->
+<section class="seo-section">
+    <div class="seo-content">
+        <h2>Ebooks y Manuales Digitales Especializados para Resolver Problemas Reales</h2>
+        <p>Nuestra plataforma reúne una selección curada de <strong>libros digitales en formato PDF</strong> diseñados para ofrecer aprendizaje rápido y práctico. Ya sea que busques independencia energética mediante la <strong>instalación de sistemas fotovoltaicos en Cuba</strong>, dominar la <strong>inteligencia artificial</strong>, descubrir los <strong>misterios de la Biblia</strong>, mejorar tus hábitos de <strong>fitness y belleza</strong> o innovar con nuevas <strong>recetas de cocina</strong>, aquí encontrarás guías listas para descargar.</p>
+
+        <h2>¿Por qué incluir Sistemas Fotovoltaicos en nuestra biblioteca?</h2>
+        <p>Ante los desafíos eléctricos actuales, contar con información técnica confiable marca la diferencia entre una inversión segura y una pérdida de dinero. Nuestros manuales de energía solar cubren:</p>
+        <ul>
+            <li><strong>Cálculo y dimensionamiento real:</strong> Aprende cuántos paneles solares y baterías necesitas según los equipos de tu hogar.</li>
+            <li><strong>Seguridad eléctrica:</strong> Selección de protecciones, calibres de cables y configuración de inversores híbridos de onda pura.</li>
+            <li><strong>Privacidad garantizada:</strong> Compra de forma anónima con QvaPay sin intermediarios tradicionales.</li>
+        </ul>
+
+        <h2>Preguntas Frecuentes</h2>
+        <h3>¿Cómo funciona el proceso de pago anónimo?</h3>
+        <p>Utilizamos <strong>QvaPay</strong> para garantizar transacciones financieras privadas y sin exposición de datos personales. Haces clic en el botón de pago de cualquier guía, transfieres el monto correspondiente al usuario <code>pacpumremedioszjdp436</code> y obtienes tu material de inmediato.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Biblioteca Digital Solar &amp; Conocimiento. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Script de filtrado -->
+<script>
+    function filtrar(categoria, boton) {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        boton.classList.add('active');
+
+        document.querySelectorAll('.card').forEach(card => {
+            if (categoria === 'todos' || card.getAttribute('data-cat') === categoria) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
 </body>
 </html>
